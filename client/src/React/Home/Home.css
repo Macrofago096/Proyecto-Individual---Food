@@ -1,0 +1,95 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search{
+  display: flex;
+  width: 600px;
+  margin: 10px;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px 10px 10px;
+}
+
+.addButton {
+  color: rgb(231, 218, 218);
+  background-color: #5a8c4bf5;
+  font-size: 17px;
+  text-align: center;
+  padding: 10px 25px;
+  margin: 5px;
+  border-radius: 3px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  color:#c264b2;
+  background-color: rgb(231, 218, 218);
+  transform: translateX(5px) translateY(5px);
+}
+
+.reloadButton {
+  color: rgb(231, 218, 218);
+  background-color: #ce5249;
+  font-size: 17px;
+  text-align: center;
+  padding: 10px 25px;
+  margin: 5px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px 1px rgb(112, 44, 44);
+  cursor: pointer;
+  border-style: none;
+}
+
+.reloadButton:hover {
+  color:#ce5249;
+  background-color: rgb(231, 218, 218);
+}
+
+.select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin:  10px 10px 10px 10px;
+}
+
+option{
+  color: rgb(231, 218, 218);
+  font-style: oblique;
+  font-weight: 500;    
+  text-shadow: 6px 4px 5px rgba(0,0,0,0.43);
+  padding: 10px 3px 0px;
+  background-color: #5a8c4bf5;
+}
+
+.eachRecipe {
+  display: flex;
+  padding: 3px;
+}
+
+.linkRecetas {    
+  text-decoration: none;    
+}
+
+.linkRecetas:visited {
+  color: none;
+  text-decoration: none;
+}
+
+.allrecipes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 10px 10px 10px 10px;
+  justify-content: center;
+}
