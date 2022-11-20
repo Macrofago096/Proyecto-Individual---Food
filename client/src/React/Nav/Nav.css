@@ -1,0 +1,32 @@
+.menubar {
+  width: 100%;
+  background-color: #426637f5;
+  border-style: solid;
+  border-color: #426637f5 ;
+  border-width: 5px;
+}
+
+.flex {
+  display: flex;
+  justify-content:flex-start ;
+}
+
+.logo {
+  position: relative;
+  width: 100%;
+  display: block;
+  left: 5px;
+  border-radius: 5px;
+}
+
+.colorspan{
+  position: relative;
+  left: 10px;
+  top: 5px;
+  color: white;
+  font-size: 35px;
+  font-family: Cambria;  
+}
+
+
+
