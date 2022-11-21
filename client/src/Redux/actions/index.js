@@ -9,13 +9,13 @@ export const FILTER_ABC = 'FILTER_ABC';
 export const FILTER_HEALTH_SCORE = 'FILTER_SCORE';
 export const RELOAD = 'RELOAD';
 
-const {RECIPES_URL, DIETS_URL, RECIPE_URL} = process.env
+//const {RECIPES_URL, DIETS_URL, RECIPE_URL} = process.env
 
 export function getRecipes(){
   return async function (dispatch){
     try{
-      const json = await axios.get('http://localhost:3001/recipes')
-      //const json = await axios.get(RECIPES_URL)
+      //const json = await axios.get('http://localhost:3001/recipes')
+      const json = await axios.get('https://proyecto-individual-food.onrender.com/recipes')
       return dispatch({
         type: GET_RECIPES,
         payload: json.data
@@ -29,8 +29,8 @@ export function getRecipes(){
 export function getRecipe(payload){
   return async function (dispatch){
     try{
-      const json = await axios.get(`http://localhost:3001/recipes?title=${payload}`)
-      //const json = await axios.get(`${RECIPES_URL}?title=${payload}`)
+      //const json = await axios.get(`http://localhost:3001/recipes?title=${payload}`)
+      const json = await axios.get(`https://proyecto-individual-food.onrender.com/recipes?title=${payload}`)
       return dispatch ({
           type: GET_RECIPE,
           payload: json.data,
@@ -45,8 +45,8 @@ export function getRecipe(payload){
 export function getRecipeDetail(payload){
   return async function (dispatch){
     try{
-      const json = await axios.get(`http://localhost:3001/recipes/${payload}`)
-      //const json = await axios.get(`${RECIPES_URL}/${payload}`)
+      //const json = await axios.get(`http://localhost:3001/recipes/${payload}`)
+      const json = await axios.get(`https://proyecto-individual-food.onrender.com/recipes/${payload}`)
       return dispatch ({
           type: GET_RECIPE_DETAIL,
           payload: json.data
@@ -60,8 +60,8 @@ export function getRecipeDetail(payload){
 export function getTypeDiets(){
   return async function (dispatch){
     try{
-      const json = await axios.get(`http://localhost:3001/diets`)
-      //const json = await axios.get(DIETS_URL)
+      //const json = await axios.get(`http://localhost:3001/diets`)
+      const json = await axios.get('https://proyecto-individual-food.onrender.com/diets')
       return dispatch ({
           type: GET_TYPE_DIETS,
           payload: json.data.map(d => d.name)
@@ -75,8 +75,8 @@ export function getTypeDiets(){
 export function postRecipe(payload){
   return async function(dispatch){
     try{
-      const json = await axios.post('http://localhost:3001/recipe', payload)
-      //const json = await axios.post(`${RECIPE_URL}`, payload) 
+      //const json = await axios.post('http://localhost:3001/recipe', payload)
+      const json = await axios.post('https://proyecto-individual-food.onrender.com/recipe', payload) 
       return json
     } catch (error) {
       console.log(error)
