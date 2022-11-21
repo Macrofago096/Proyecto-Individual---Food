@@ -15,7 +15,7 @@ export default function Recipe({ image, title, dietTypes }) {
                 <h2 className="recipe">{title}</h2>            
             </div>
 
-            <div className="diets">
+            <div className="contDiet">
                 {dietTypes?.map(e => {
                     return (
                         <h5 className="diets" key={prevId++}>{e.toUpperCase()}</h5>
